@@ -1,1 +1,1 @@
-Jelenlegi állapot: 50% kész
+Jelenlegi állapot: 75% kész
