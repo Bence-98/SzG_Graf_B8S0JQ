@@ -546,7 +546,7 @@ void objektumok(World* world) {
 	world->room.front = load_texture("textures//fal.jpg");
 	world->room.left = load_texture("textures//fal.jpg");
 	world->room.right = load_texture("textures//fal.jpg");
-	world->room.top = load_texture("textures//teto.png");
+	world->room.top = load_texture("textures//teto.jpg");
 
 
 	world->helpTexture = load_texture("textures//info.png");

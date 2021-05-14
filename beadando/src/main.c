@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
     glutInitWindowSize(1000, 700);
     glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH);
 
-    glutCreateWindow("Szabo Peter Grafika Beadando");
+    glutCreateWindow("Beadando");
 
     init();
 
