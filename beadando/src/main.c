@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
 {
     glutInit(&argc, argv);
 
-    glutInitWindowSize(1000, 700);
+    glutInitWindowSize(1024, 768);
     glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH);
 
     glutCreateWindow("Labyrinth - Kelemen Bence");

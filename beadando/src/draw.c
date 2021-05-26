@@ -61,12 +61,9 @@ void draw_content(World* world)
     glPopMatrix();
         }
 
-
-
-
-
     glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, material_ambient_default);
 }
+
 
 void draw_ground(Room room) {
 	glBindTexture(GL_TEXTURE_2D, room.ground);

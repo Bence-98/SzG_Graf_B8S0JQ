@@ -10,5 +10,6 @@ void moveObjectBackward(World* world);
 void moveObjectRight(World* world);
 void moveObjectLeft(World* world);
 void moveObjectRandom(World* world);
+int UpZCollision(World* world);
 
 #endif /* INCLUDE_MOVE_H_ */

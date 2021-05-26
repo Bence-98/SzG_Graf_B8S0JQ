@@ -29,6 +29,7 @@ struct Action
 	int moveObjectRight;
 	int moveObjectLeft;
 	int moveObjectRandom;
+
 };
 struct Action action;
 
@@ -42,6 +43,7 @@ void moveObjectBackward(World* world);
 void moveObjectRight(World* world);
 void moveObjectLeft(World* world);
 void moveObjectRandom(World* world);
+int UpZCollision(World* world);
 
 /**
  * Set the callbacks for GLUT.
