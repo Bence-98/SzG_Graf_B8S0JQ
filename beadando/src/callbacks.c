@@ -1,4 +1,5 @@
 #include <math.h>
+#include <stdbool.h>
 
 #include "callbacks.h"
 #include "init.h"
@@ -92,6 +93,9 @@ void keyboard(unsigned char key, int x, int y)
 	case '-':
 		action.decrease_light = TRUE;
 		break;
+	case 112:
+        isHelpOn = TRUE;
+	    break;
 	case 27:
 		exit(0);
 	}
@@ -138,6 +142,9 @@ void keyboardUp(unsigned char key, int x, int y)
 	case '-':
 		action.decrease_light = FALSE;
 		break;
+  /*  case 112:
+        isHelpOn = FALSE;
+        break;*/
 	}
 
 	glutPostRedisplay();
@@ -264,11 +271,21 @@ int coords[4][38] = {
         {110 , 5  , 100 , 80  , 5   , 40   , 5    , 40  , 5   , 55 , 5   , 25   , 5    , 55   , 5    , 55  , 5   , 35  , 5   , 5  , 120 , 5    , 90  , 5   , 50  , 180 , 5    , 200  , 45, 5   , 140  , 100  , 5    , 100  , 5   , 65  , 5    , 40   } //M
 };
 
-int UpZCollision(World* world){
-    int v=1;
-        for (int i = 0; i<38; i++) {
-            if (coords[1][i] + coords[3][i] >= world->object1.position.z && coords[1][i] - coords[3][i] <= world->object1.position.z && coords[2][i] - coords[4][i] <= world->object1.position.x && coords[2][i] + coords[4][i] >= world->object1.position.x)
-                v=0;
+int CheckCollision(World* world) // AABB - AABB collision
+{
+    int hit = 1;
+    for (int i = 0; i<38; i++) {
+
+
+bool collisionX = world->object1.position.x + 50 >= coords[1][i] - coords[3][i]*5 &&
+                    coords[1][i] + coords[3][i]*5 >= world->object1.position.x - 50;
+
+bool collisionZ = world->object1.position.z + 50 >= coords[2][i] - coords[4][i]*5 &&
+                    coords[2][i] + coords[4][i]*5 >= world->object1.position.z - 50;
+
+if (collisionX==true && collisionZ==true)
+    hit = 0;
         }
-        return v;
-};
+   // hit=1;
+return hit;
+}

@@ -3,6 +3,7 @@
 
 #include "camera.h"
 #include "move.h"
+#include <stdbool.h>
 
 #include <GL/glut.h>
 
@@ -28,7 +29,7 @@ struct Action
 	int moveObjectBackward;
 	int moveObjectRight;
 	int moveObjectLeft;
-	int moveObjectRandom;
+
 
 };
 struct Action action;
@@ -43,7 +44,7 @@ void moveObjectBackward(World* world);
 void moveObjectRight(World* world);
 void moveObjectLeft(World* world);
 void moveObjectRandom(World* world);
-int UpZCollision(World* world);
+//bool CheckCollision(World* world);
 
 /**
  * Set the callbacks for GLUT.

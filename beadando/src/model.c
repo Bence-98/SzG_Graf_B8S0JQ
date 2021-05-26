@@ -539,7 +539,7 @@ void objects(World* world) {
 
     load_model("models//brick.obj", &world->object2.model);
     world->object2.texture = load_texture("textures//brick.png");
-    init_object(&world->object2, 100, 100);
+    init_object(&world->object2, 0, 0);
 
 
 

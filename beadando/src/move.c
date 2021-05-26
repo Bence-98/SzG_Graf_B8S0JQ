@@ -6,26 +6,41 @@
 
 
 void moveObjectForward(World* world) {
-				if(world->object1.position.z < 1950 && UpZCollision(world)==1){
-					world->object1.position.z = world->object1.position.z + 5;     //M F
+				if(world->object1.position.z < 1950 && CheckCollision(world)){
+					world->object1.position.z = world->object1.position.z + 10;     //M F
+				}
+				else{
+                    world->object1.position.z = 1910;
+                    world->object1.position.x = 1910;
 				}
 }
 
 void moveObjectBackward(World* world) {
-				if(world->object1.position.z > -1950 /*&& DownZCollision*/){
-					world->object1.position.z = world->object1.position.z - 5;     //M L
+				if(world->object1.position.z > -1950 && CheckCollision(world)){
+					world->object1.position.z = world->object1.position.z - 10;     //M L
 				}
+                else{
+                    world->object1.position.z = 1910;
+                    world->object1.position.x = 1910;
+                }
 }
 
 void moveObjectLeft(World* world) {
-				if(world->object1.position.x < 1950 /*&& LeftXCollision*/){
-					world->object1.position.x = world->object1.position.x + 5;      //Sz B
+				if(world->object1.position.x < 1950 && CheckCollision(world)){
+					world->object1.position.x = world->object1.position.x + 10;      //Sz B
 				}
+                else{
+                    world->object1.position.z = 1910;
+                    world->object1.position.x = 1910;
+                }
 }
 
 void moveObjectRight(World* world) {
-				if(world->object1.position.x > -1950 /*&& RightXCollision*/){
-					world->object1.position.x = world->object1.position.x - 5;      //Sz J
-					
+				if(world->object1.position.x > -1950 && CheckCollision(world)){
+					world->object1.position.x = world->object1.position.x - 10;      //Sz J
 				}
+                else{
+                    world->object1.position.z = 1910;
+                    world->object1.position.x = 1910;
+                }
 }

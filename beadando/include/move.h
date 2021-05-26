@@ -2,6 +2,7 @@
 #define INCLUDE_MOVE_H_
 
 #include "model.h"
+#include <stdbool.h>
 
 
 
@@ -10,6 +11,7 @@ void moveObjectBackward(World* world);
 void moveObjectRight(World* world);
 void moveObjectLeft(World* world);
 void moveObjectRandom(World* world);
-int UpZCollision(World* world);
+int CheckCollision(World* world);
+
 
 #endif /* INCLUDE_MOVE_H_ */
