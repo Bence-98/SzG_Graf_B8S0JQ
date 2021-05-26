@@ -534,7 +534,7 @@ GLuint load_texture(const char* filename) {
 void objects(World* world) {
 	
 	load_model("models//sphere.obj", &world->object1.model);
-	world->object1.texture = load_texture("textures//texture.png");
+	world->object1.texture = load_texture("textures//texture.jpg");
 	init_object(&world->object1, 1910, 1910);
 
     load_model("models//brick.obj", &world->object2.model);
