@@ -6,11 +6,10 @@
 #include <math.h>
 #include <GL/glut.h>
 
-
-
 /**
  * Main function
  */
+
 int main(int argc, char* argv[])
 {
     glutInit(&argc, argv);

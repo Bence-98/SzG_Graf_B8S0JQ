@@ -3,7 +3,9 @@
 #include "callbacks.h"
 #include "move.h"
 
-
+/**
+ * Move Object
+ */
 
 void moveObjectForward(World* world) {
 				if(world->object1.position.z < 1950 && CheckCollision(world)){

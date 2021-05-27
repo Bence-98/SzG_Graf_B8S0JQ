@@ -5,6 +5,10 @@
 #define M_PI 3.14159265358979323846
 #define size 2000
 
+/**
+ *  Camera movement
+ */
+
 double degree_to_radian(double degree)
 {
 	return degree * M_PI / 180.0;

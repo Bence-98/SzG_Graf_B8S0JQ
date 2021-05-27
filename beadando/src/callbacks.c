@@ -7,6 +7,10 @@
 #include "model.h"
 #include "move.h"
 
+/**
+ * Keyboard, mouse functions
+ */
+
 int isHelpOn = 0;
 
 int WINDOW_WIDTH;

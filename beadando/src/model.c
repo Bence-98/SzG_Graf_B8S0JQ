@@ -8,6 +8,10 @@
 #define LINE_BUFFER_SIZE 1024
 
 
+/**
+ * Load models, textures
+ */
+
 int count_tokens(const char* text)
 {
     int i = 0;

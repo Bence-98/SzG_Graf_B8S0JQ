@@ -6,17 +6,14 @@
 #include "model.h"
 #include "callbacks.h"
 
+/**
+ * Draw room, walls, sphere
+ */
+
 double roomSize = 2000;
 
 GLfloat material_ambient_default[] = {0.9, 0.9, 0.9, 0.5};
 
-void draw_teapot_for_light(){
-    glPushMatrix();
-        glTranslatef(120, 15, 120);
-        glScalef(12, 12, 12);
-        glutSolidTeapot(1.0);
-    glPopMatrix();
-}
 
 void draw_content(World* world)
 {
@@ -225,27 +222,6 @@ void draw_quads(const struct Model* model)
     glEnd();
 }
 
-void draw_normals(const struct Model* model, double length)
-{
-	int i;
-	double x1, y1, z1, x2, y2, z2;
-
-	glColor3f(0, 0, 1);
-
-	glBegin(GL_LINES);
-
-	for (i = 0; i < model->n_vertices; ++i) {
-		x1 = model->vertices[i].x;
-		y1 = model->vertices[i].y;
-		z1 = model->vertices[i].z;
-		x2 = x1 + model->normals[i].x * length;
-		y2 = y1 + model->normals[i].y * length;
-		z2 = z1 + model->normals[i].z * length;
-		glVertex3d(x1, y1, z1);
-		glVertex3d(x2, y2, z2);
-	}
-	glEnd();
-}
 
 void draw_model(const struct Model* model)
 {
